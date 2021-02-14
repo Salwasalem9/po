@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+   
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+               <p>UDACITY</p>
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="url" name="url" value=""  placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+                <section id="Show-Results">
+                    <h3>Results</h3>
+                    <div id="container">
+                      <div id="agreement">
+                        Agreement: <span id="arg1"></span>
+                      </div>
+                      <div id="subjectivity">
+                        Subjectivity: <span id="sub2"></span>
+                      </div>
+                      <div id="confidence">
+                        Confidence: <span id="conf3"></span>
+                      </div>
+                      <div id="score">Score: <span id="score4"></span></div>
+                    </div>
+                  </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+              });
+            }
+          </script>
+    </body>
+</html>
